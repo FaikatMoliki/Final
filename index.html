@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f8b4ab;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #f8b4ab;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #f8b4ab;
+  color: black;
+  padding: 14px 80px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+
+button:hover {
+  opacity:1;
+}
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: pink;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: white;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f8b4ab;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+.btn-group button {
+  background-color: #f8b4ab; /* Green background */
+  border: 1px solid black; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 50%; /* Set a width if needed */
+}
+  
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #f8b4ab;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+input[type=text], select, textarea {
+  background-color: #f8b4ab;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #f8b4ab;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #f8b4ab;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+}
+
+h3 {
+text-align: center;    
+}
+
+ button1 {
+            max-width: 200px;
+            padding: 10px 20px;
+            color: white;
+            background-image: linear-gradient(#b00000, #630000);
+            border: none;
+            border-radius: 3px;
+ } 
+button1:hover {
+            cursor: pointer;
+            background-image: linear-gradient(#630000, #350000);
+        }
+</style>
+<body>
+<img src="Mini%20Logo.png" alt="Logo" class="center">
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign In </button>
+<button onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Sign Up</button>
+    
+<div id="id01" class="modal">
+  
+  <form>
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <input type="text" placeholder="Username" name="uname" required>
+
+      <input type="password" placeholder="Password" name="psw" required>
+    
+      <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
+    </div>
+  </form>
+</div>
+    
+<div id="id02" class="modal">
+    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <button type ="button">Model</button>
+        <button onclick="document.getElementById('id07').style.display='block'">Dress</button>
+        <button onclick="document.getElementById('id05').style.display='block'">Work</button>
+        <button onclick="document.getElementById('id04').style.display='block'" >Communicate</button>
+</div>
+  
+    
+<div id="id03" class="modal">
+  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form>
+    <div class="container">
+      <hr>
+      <input type="text" placeholder="First Name" name="email" required>
+      <input type="password" placeholder="Last Name" name="psw" required>
+      <input type="password" placeholder="Age" name="psw-repeat" required>
+      <input type="password" placeholder="Username" name="psw-repeat" required>
+      <input type="password" placeholder="Password" name="psw-repeat" required>
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Done</button>
+      </div>
+    </div>
+  </form>
+</div>
+    
+<div id="id04" class="modal">
+    <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form>
+      <label for="friends">Find Friends/Open Messages</label>
+    <select id="country" name="country">
+      <option value="australia">Search for friends</option>
+      <option value="canada">Open Messages</option>
+      </select>
+    <input type="text" id="lname" name="lastname" placeholder="Send To">
+    <textarea id="subject" name="subject" placeholder="Type your message here.." style="height:200px"></textarea>
+    <button type="button" onclick="document.getElementById('id04').style.display='none'" >Submit</button>
+  </form>
+</div>
+    
+<div id="id05" class="modal">
+    <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <button type ="button">Career</button>
+         <button onclick="document.getElementById('id06').style.display='block'">Learn</button>
+</div>
+    
+<div id="id06" class="modal">
+    <span onclick="document.getElementById('id06').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <h3>Pick a coding language</h3>
+        <button type ="button">HTML</button>
+        <button type ="button">CSS</button>
+        <button type ="button">JAVA</button>
+        <button type ="button">Python</button>    
+</div>
+<div id = "id07" class="modal" style="background-color:#f8b4ab">
+    <span onclick="document.getElementById('id07').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <div class="image">
+            <img id="imgToSwap" src="Dress1.jpg">
+        </div>
+        <div class="btnContainer">
+            <button1 id="reverseBtn">Reverse</button1>
+            <button1 id="changeBtn">Change</button1>
+            <button1 type ="button">Other Dressing Options</button1> 
+        </div>
+    </div>    
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+const reverseSrc = "Dress1.jpg";
+const changeSrc = "Dress2.jpg";
+
+const imgToSwap = document.querySelector('#imgToSwap');
+const reverseBtn = document.querySelector('#reverseBtn');
+const changeBtn = document.querySelector('#changeBtn');
+    
+reverseBtn.addEventListener('click', function() {swapImageSrc(reverseSrc)});
+changeBtn.addEventListener('click', function() {swapImageSrc(changeSrc)});
+
+function swapImageSrc(src) {
+        // Take the src provided, and change out the one currently on the image.
+        imgToSwap.src = src;
+    }
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
