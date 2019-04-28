@@ -209,7 +209,7 @@ button1:hover {
     
 <div id="id02" class="modal">
     <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <button type ="button">Model</button>
+        <button type ="button"  onclick="alert('This option will enable the user to create their own avatar/model.')">Model</button>
         <button onclick="document.getElementById('id07').style.display='block'">Dress</button>
         <button onclick="document.getElementById('id05').style.display='block'">Work</button>
         <button onclick="document.getElementById('id04').style.display='block'" >Communicate</button>
@@ -250,17 +250,18 @@ button1:hover {
     
 <div id="id05" class="modal">
     <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <button type ="button">Career</button>
+        <button onclick="document.getElementById('id08').style.display='block'">Career</button>
          <button onclick="document.getElementById('id06').style.display='block'">Learn</button>
 </div>
     
 <div id="id06" class="modal">
     <span onclick="document.getElementById('id06').style.display='none'" class="close" title="Close Modal">&times;</span>
         <h3>Pick a coding language</h3>
-        <button type ="button">HTML</button>
-        <button type ="button">CSS</button>
-        <button type ="button">JAVA</button>
-        <button type ="button">Python</button>    
+        <button type ="button" onclick="alert('Hypertext Markup Language is the standard markup language for creating web pages and web applications. With Cascading Style Sheets and JavaScript, it forms a triad of cornerstone technologies for the World Wide Web.The full app will provide more details about it and how to use it.It will come along with practice questions and notes.')">HTML</button>
+        <button type ="button"  onclick="alert('Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.It is a language that describes the style of an HTML document and describes how HTML elements should be displayed.The full app will provide more details about it and how to use it.It will come along with practice questions and notes.')">CSS</button>
+        <button type ="button"  onclick="alert('Java is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible.The full app will provide more details about it and how to use it.It will come along with practice questions and notes.')">JAVA</button>
+        <button type ="button"  onclick="alert('Python is an object-oriented, high-level programming language with integrated dynamic semantics primarily for web and app development.The full app will provide more details about it and how to use it.It will come along with practice questions and notes.')">Python</button>
+           
 </div>
 <div id = "id07" class="modal" style="background-color:#f8b4ab">
     <span onclick="document.getElementById('id07').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -270,9 +271,26 @@ button1:hover {
         <div class="btnContainer">
             <button1 id="reverseBtn">Reverse</button1>
             <button1 id="changeBtn">Change</button1>
-            <button1 type ="button">Other Dressing Options</button1> 
         </div>
-    </div>    
+    </div> 
+    
+<div id="id08" class="modal">
+    <span onclick="document.getElementById('id08').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <h3>Pick a career</h3>
+        <button type ="button"  onclick="alert('A software developer is a person concerned with facets of the software development process, including the research, design, programming, and testing of computer software.')">Software developer</button>
+        <button type ="button"  onclick="alert('Computer systems analysts study an organizations current computer systems and procedures and design information systems solutions to help the organization operate more efficiently and effectively.')">Computer systems analyst</button>
+        <button type ="button"  onclick="alert('Information technology managers are mainly responsible for planning, coordinating and directing activities that have to do with the computer and information systems of a company. From the hardware to software to the network of an organization, IT managers are in charge of their installation and maintenance.')">IT manager</button>
+        <button type ="button"  onclick="alert('Information security analysts plan and carry out security measures to protect an organizations computer networks and systems.')">Information security analyst</button>
+        <button type ="button"  onclick="alert('Your responsibility as a database administrator (DBA) will be the performance, integrity and security of a database. You will be involved in the planning and development of the database, as well as in troubleshooting any issues on behalf of the users. You will ensure that: data remains consistent across the database.')">Database administrator</button>
+        <button type ="button"  onclick="alert('A Web Developer is responsible for the coding, design and layout of a website according to a companys specifications.')">Web developer</button>
+        <button type ="button"  onclick="alert('Computer network architects design and build data communication networks, including local area networks (LANs), wide area networks (WANs), and Intranets.')">Computer network architect</button>
+        <button type ="button"  onclick="alert('A system administrator, or sysadmin, is a person who is responsible for the upkeep, configuration, and reliable operation of computer systems; especially multi-user computers, such as servers.')">Computer systems administrator</button>  
+</div>
+    
+    
+    
+    
+    
 <script>
 // Get the modal
 var modal = document.getElementById('id01');
