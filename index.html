@@ -108,12 +108,17 @@ hr {
 }
 
 /* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 800px) {
   .cancelbtn, .signupbtn {
      width: 100%;
   }
 }
 
+#imgToSwap{
+        width: 80vw;
+        max-width: 700px;
+    }
+    
 .btn-group button {
   background-color: #f8b4ab; /* Green background */
   border: 1px solid black; /* Green border */
@@ -198,11 +203,11 @@ button1:hover {
     </div>
 
     <div class="container">
-      <input type="text" placeholder="Username" name="uname" required>
+      <input type="text" placeholder="Username" name="uname">
 
-      <input type="password" placeholder="Password" name="psw" required>
+      <input type="password" placeholder="Password" name="psw">
     
-      <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
+      <button id="logInButton" style="width:auto;">Login</button>
     </div>
   </form>
 </div>
@@ -221,11 +226,11 @@ button1:hover {
   <form>
     <div class="container">
       <hr>
-      <input type="text" placeholder="First Name" name="email" required>
-      <input type="password" placeholder="Last Name" name="psw" required>
-      <input type="password" placeholder="Age" name="psw-repeat" required>
-      <input type="password" placeholder="Username" name="psw-repeat" required>
-      <input type="password" placeholder="Password" name="psw-repeat" required>
+      <input type="text" placeholder="First Name" name="email">
+      <input type="password" placeholder="Last Name" name="psw">
+      <input type="password" placeholder="Age" name="psw-repeat">
+      <input type="password" placeholder="Username" name="psw-repeat">
+      <input type="password" placeholder="Password" name="psw-repeat">
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
         <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Done</button>
@@ -304,11 +309,16 @@ const changeBtn = document.querySelector('#changeBtn');
     
 reverseBtn.addEventListener('click', function() {swapImageSrc(reverseSrc)});
 changeBtn.addEventListener('click', function() {swapImageSrc(changeSrc)});
-
+document.querySelector("#logInButton").addEventListener("click", function(event) {
+    event.preventDefault();
+    document.getElementById('id02').style.display='block';
+})
+    
 function swapImageSrc(src) {
         // Take the src provided, and change out the one currently on the image.
         imgToSwap.src = src;
     }
+    
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
