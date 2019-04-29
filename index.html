@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
+body {font-family: Arial, Helvetica, sans-serif; background-color: #FA8072}
+    
 * {box-sizing: border-box;}
-
 /* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
@@ -112,6 +112,7 @@ hr {
   .cancelbtn, .signupbtn {
      width: 100%;
   }
+    
 }
 
 #imgToSwap{
@@ -189,30 +190,32 @@ button1:hover {
             cursor: pointer;
             background-image: linear-gradient(#630000, #350000);
         }
+
 </style>
+    
 <body>
-<img src="Mini%20Logo.jpg" alt="Logo" class="center">
+    
+<img src="Mini%20Logo.png" alt="Logo" class="center">
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign In </button>
 <button onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Sign Up</button>
     
-<div id="id01" class="modal">
-  
+<div id="id01" class="modal" style="background-color:#FA8072">
   <form>
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
     </div>
 
     <div class="container">
-      <input type="text" placeholder="Username" name="uname">
+      <input type="text" placeholder="Username" name="uname" required>
 
-      <input type="password" placeholder="Password" name="psw">
+      <input type="password" placeholder="Password" name="psw" required>
     
       <button id="logInButton" style="width:auto;">Login</button>
     </div>
   </form>
 </div>
     
-<div id="id02" class="modal">
+<div id="id02" class="modal" style="background-color:#FA8072">
     <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
         <button type ="button"  onclick="alert('This option will enable the user to create their own avatar/model.')">Model</button>
         <button onclick="document.getElementById('id07').style.display='block'">Dress</button>
@@ -221,16 +224,16 @@ button1:hover {
 </div>
   
     
-<div id="id03" class="modal">
+<div id="id03" class="modal" style="background-color:#FA8072">
   <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
   <form>
     <div class="container">
       <hr>
-      <input type="text" placeholder="First Name" name="email">
-      <input type="password" placeholder="Last Name" name="psw">
-      <input type="password" placeholder="Age" name="psw-repeat">
-      <input type="password" placeholder="Username" name="psw-repeat">
-      <input type="password" placeholder="Password" name="psw-repeat">
+      <input type="text" placeholder="First Name" name="email" required>
+      <input type="password" placeholder="Last Name" name="psw" required>
+      <input type="password" placeholder="Age" name="psw-repeat" required>
+      <input type="password" placeholder="Username" name="psw-repeat" required>
+      <input type="password" placeholder="Password" name="psw-repeat" required>
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
         <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Done</button>
@@ -239,7 +242,7 @@ button1:hover {
   </form>
 </div>
     
-<div id="id04" class="modal">
+<div id="id04" class="modal" style="background-color:#FA8072">
     <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
         <form>
       <label for="friends">Find Friends/Open Messages</label>
@@ -253,13 +256,13 @@ button1:hover {
   </form>
 </div>
     
-<div id="id05" class="modal">
+<div id="id05" class="modal" style="background-color:#FA8072">
     <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">&times;</span>
         <button onclick="document.getElementById('id08').style.display='block'">Career</button>
          <button onclick="document.getElementById('id06').style.display='block'">Learn</button>
 </div>
     
-<div id="id06" class="modal">
+<div id="id06" class="modal" style="background-color:#FA8072">
     <span onclick="document.getElementById('id06').style.display='none'" class="close" title="Close Modal">&times;</span>
         <h3>Pick a coding language</h3>
         <button type ="button" onclick="alert('Hypertext Markup Language is the standard markup language for creating web pages and web applications. With Cascading Style Sheets and JavaScript, it forms a triad of cornerstone technologies for the World Wide Web.The full app will provide more details about it and how to use it.It will come along with practice questions and notes.')">HTML</button>
@@ -279,7 +282,7 @@ button1:hover {
         </div>
     </div> 
     
-<div id="id08" class="modal">
+<div id="id08" class="modal" style="background-color:#FA8072">
     <span onclick="document.getElementById('id08').style.display='none'" class="close" title="Close Modal">&times;</span>
         <h3>Pick a career</h3>
         <button type ="button"  onclick="alert('A software developer is a person concerned with facets of the software development process, including the research, design, programming, and testing of computer software.')">Software developer</button>
@@ -309,6 +312,7 @@ const changeBtn = document.querySelector('#changeBtn');
     
 reverseBtn.addEventListener('click', function() {swapImageSrc(reverseSrc)});
 changeBtn.addEventListener('click', function() {swapImageSrc(changeSrc)});
+    
 document.querySelector("#logInButton").addEventListener("click", function(event) {
     event.preventDefault();
     document.getElementById('id02').style.display='block';
