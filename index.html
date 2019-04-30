@@ -183,34 +183,36 @@ h3 {
 text-align: center;    
 }
     
-#codeFashionablyLogo{
-        background-image:url(Mini%20Logo.png);
-        position:absolute;
-        left:50%;
-        top:50%;
-        background-size:contain;
-        opacity:0;
-        transform:translate(-50%, -50%);
-        animation: loading 10s ease-in-out;
-    }
-    @keyframes loading{
-        0%{width:300px;height:300px; opacity:1;}
-        50%{width:400px;height:400px;opacity:1;}
-        100%{width:300px;height:300px;opacity:0;}
-    }
+#introduction_header{
+            position: absolute;
+            top: 10vw;
+            left: 10vw;
+            width: 75vw;
+            opacity: 0;
+            font-size: 2em;
+            font-family: 'Arial', cursive;
+            animation: introduction 10s;
+        }
+    @keyframes introduction {
+            0%{transform: translateX(-50vw); opacity: 0;}
+            20% {transform: translateX(0vw); opacity: 1;}
+            80% {transform: translateX(0vw); opacity: 1;}
+            100%{transform: translateX(-50vw); opacity: 0;}
+        }
+    
     
 </style>
     <title>Code Fashionably</title>
 </head>
     
-<body>
-<div id="codeFashionablyLogo"></div>
+<body>    
+    
+<div id="introduction_header">Code Fashionably</div>
     
 <img src="Mini%20Logo.png" alt="Logo" class="center">
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign In </button>
 <button onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Sign Up</button>
 
-    
 <div id="id01" class="modal" style="background-color:#FA8072">
   <form>
     <div class="imgcontainer">
